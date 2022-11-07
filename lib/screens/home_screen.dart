@@ -92,7 +92,7 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   SizedBox(
                     width: double.infinity,
-                    height: 280,
+                    height: 290,
                     child: ListView.builder(
                       shrinkWrap: true,
                       controller: homeController.listViewController,
