@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:test_web/responsive.dart';
 
 extension WidgetX on Widget {
-
   Widget paddingMobile(BuildContext context, double h, v) {
     if (Responsive.isMobile(context)) {
       return Padding(
@@ -36,4 +35,12 @@ extension WidgetX on Widget {
     }
   }
 
+  Widget size(double w, h) {
+    return Column(
+      children: [
+        this,
+        SizedBox(width: w, height: h),
+      ],
+    );
+  }
 }

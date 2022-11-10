@@ -29,10 +29,10 @@ class MyApp extends StatelessWidget {
         ),
         scaffoldBackgroundColor: Colors.white,
       ),
-      initialRoute: "/home_screen",
+      initialRoute: "/about_us_screen",
       getPages: [
         GetPage(name: "/home_screen", page: () => HomeScreen()),
-        GetPage(name: "/about_us_screen", page: () => AboutUsScreen()),
+        GetPage(name: "/about_us_screen", page: () => const AboutUsScreen()),
       ],
     );
   }
