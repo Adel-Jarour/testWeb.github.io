@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:test_web/controller/home_controller.dart';
-import 'package:test_web/screens/about_us_screen.dart';
-import 'package:test_web/widgets/custem_text.dart';
+import 'package:test_web/responsive.dart';
+import 'package:test_web/screens/list_tile_drawer_widget.dart';
+import 'package:test_web/widgets/custom_list_tile.dart';
 
 class DrawerWidget extends StatelessWidget {
   const DrawerWidget({
@@ -15,97 +16,44 @@ class DrawerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      width: 220,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(
-          horizontal: 10,
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const SizedBox(
-              height: 15,
-            ),
-            Align(
-              alignment: Alignment.topRight,
-              child: IconButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                icon: const Icon(
-                  Icons.close,
-                  size: 15,
-                ),
+      width: Responsive.isMobile(context)
+          ? MediaQuery.of(context).size.width * 0.4
+          : MediaQuery.of(context).size.width * 0.32,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.032,
+          ),
+          Align(
+            alignment: Alignment.topRight,
+            child: IconButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              icon: Icon(
+                Icons.close,
+                size: 45.r,
               ),
             ),
-            const SizedBox(
-              height: 20,
-            ),
-            ListView(
-              shrinkWrap: true,
-              children: [
-                ListTile(
-                  leading: const Icon(
-                    Icons.location_on,
-                  ),
-                  title: WebText(
-                    txt: "Location",
-                    color: Colors.teal,
-                  ),
-                  onTap: () {
-                    homeController.navigateToLocation(20, 20);
-                  },
-                ),
-                ListTile(
-                  leading: const Icon(Icons.call),
-                  title: WebText(
-                    txt: "Call",
-                    color: Colors.teal,
-                  ),
-                  onTap: () {
-                    homeController.makeCall();
-                  },
-                ),
-                ListTile(
-                  leading: const Icon(Icons.email),
-                  title: WebText(
-                    txt: "Email",
-                    color: Colors.teal,
-                  ),
-                  onTap: () {
-                    homeController.sendMail();
-                  },
-                ),
-                ListTile(
-                  leading: const Icon(Icons.facebook),
-                  title: WebText(
-                    txt: "Facebook",
-                    color: Colors.teal,
-                  ),
-                  onTap: () {},
-                ),
-                ListTile(
-                  leading: const Icon(Icons.face),
-                  title: WebText(
-                    txt: "Instagram",
-                    color: Colors.teal,
-                  ),
-                  onTap: () {},
-                ),
-                ListTile(
-                  leading: const Icon(Icons.info),
-                  title: WebText(
-                    txt: "About us",
-                    color: Colors.teal,
-                  ),
-                  onTap: () {
-                    Get.to(() => const AboutUsScreen());
-                  },
-                ),
-              ],
-            ),
-          ],
-        ),
+          ),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.03,
+          ),
+          ListView(
+            shrinkWrap: true,
+            children: [
+              CustomListTile(
+                txt: "Location",
+                icon: Icons.location_on,
+                onTap: () {
+                  homeController.navigateToLocation(20, 30);
+                },
+              ),
+              ListTileDrawerWidget(homeController: homeController),
+            ],
+          ),
+        ],
       ),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:test_web/controller/home_controller.dart';
 import 'package:test_web/responsive.dart';
 import 'package:test_web/widgets/custom_button.dart';
@@ -95,44 +96,48 @@ class ThreeActionButtonWidget extends StatelessWidget {
         ],
       ),
       desk: Row(
+        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Expanded(
             child: WebButton(
               txt: "Email",
               outLineBorder: false,
-              high: 50,
+              high: 55.h,
               colorButton: Colors.teal,
               onPressed: () {
                 homeController.sendMail();
               },
+              fontSize: 28.sp,
             ),
           ),
-          const SizedBox(
-            width: 15,
+          SizedBox(
+            width: MediaQuery.of(context).size.width * 0.04,
           ),
           Expanded(
             child: WebButton(
               txt: "Call",
               outLineBorder: false,
-              high: 50,
+              high: 55.h,
               colorButton: Colors.teal,
               onPressed: () {
                 homeController.makeCall();
               },
+              fontSize: 28.sp,
             ),
           ),
-          const SizedBox(
-            width: 15,
+          SizedBox(
+            width: MediaQuery.of(context).size.width * 0.04,
           ),
           Expanded(
             child: WebButton(
               txt: "Location",
               outLineBorder: false,
-              high: 50,
+              high: 55.h,
               colorButton: Colors.teal,
               onPressed: () {
                 homeController.navigateToLocation(20, 20);
               },
+              fontSize: 28.sp,
             ),
           ),
         ],
