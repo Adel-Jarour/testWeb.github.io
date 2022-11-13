@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:test_web/responsive.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
@@ -36,64 +37,49 @@ class HomeController extends GetxController {
         .join('&');
   }
 
-  late ScrollController listViewController;
-  late PageController pageController;
+  late PageController _pageController;
+  late BuildContext context;
 
-  @override
-  void onInit() {
-    // TODO: implement onInit
-    super.onInit();
-    listViewController = ScrollController();
-    pageController = PageController();
+  // double _getViewportFraction(){
+  //   if (double.infinity < 350){
+  //     return 1 / 1;
+  //   }else if (double.infinity >= 350 && double.infinity < 800){
+  //     return 1 / 2.0;
+  //   }else {
+  //     return 1/ 3;
+  //   }
+  // }
+
+  PageController getPageController(BuildContext context){
+    if (Responsive.isMobile(context)){
+      return _pageController = PageController(viewportFraction: 1 / 1);
+    }else if (Responsive.isTablet(context)){
+      return _pageController = PageController(viewportFraction: 1 / 2);
+    }else {
+      return _pageController = PageController(viewportFraction: 1 / 3);
+    }
   }
+
+  // @override
+  // void onInit() {
+  //
+  //   super.onInit();
+  //   // pageController = PageController(viewportFraction: 1 / 3);
+  // }
 
   @override
   void dispose() {
     // TODO: implement dispose
     super.dispose();
-    listViewController.dispose();
-    pageController.dispose();
+    _pageController.dispose();
   }
 
   void next() {
-    pageController.nextPage(duration: const Duration(milliseconds: 900), curve: Curves.fastOutSlowIn);
+    _pageController.nextPage(duration: const Duration(milliseconds: 900), curve: Curves.fastOutSlowIn);
   }
   void back() {
-    pageController.previousPage(duration: const Duration(milliseconds: 900), curve: Curves.fastOutSlowIn);
+    _pageController.previousPage(duration: const Duration(milliseconds: 900), curve: Curves.fastOutSlowIn);
   }
 
-// void scrollNext() {
-//   listViewController.animateTo(
-//     listViewController.position.maxScrollExtent,
-//     duration: Duration(seconds: 1),
-//     curve: Curves.fastOutSlowIn,
-//   );
-// }
-
-// double? index;
-//
-// putIndex(double index){
-//   this.index = index;
-//   update();
-// }
-//
-// double? getIndex() {
-//
-//   if(index != null) {
-//     double back = index! - 1;
-//     return back;
-//   } else {
-//     return 1;
-//   }
-// }
-//
-// void scrollBack() {
-//   // listViewController.animateTo(
-//   //     listViewController.position.extentBefore,
-//   //     curve: Curves.fastLinearToSlowEaseIn,
-//   //     duration: const Duration(seconds: 1),
-//   // );
-//   listViewController.jumpTo(getIndex() ?? 1);
-// }
 
 }

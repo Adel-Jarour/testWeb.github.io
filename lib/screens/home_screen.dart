@@ -43,78 +43,57 @@ class HomeScreen extends StatelessWidget {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.05,
               ),
-              const IntroWidget(),
+              IntroWidget(txtFontSize: 75.sp, descFontSize: 65.sp,),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.08,
               ),
               ThreeActionButtonWidget(homeController: homeController),
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.15,
+                height: MediaQuery.of(context).size.height * 0.1,
               ),
-              SizedBox(
-                width: MediaQuery.of(context).size.width * 0.18,
-                child: const Divider(
-                  color: Colors.grey,
-                  height: 5,
-                  thickness: 1.5,
-                ),
-              ),
+              const DividerWidget(),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.03,
               ),
               WebText(
                 txt: "Gallery",
                 color: Colors.blueGrey,
-                fontSize: 20,
+                fontSize: 70.sp,
               ),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.08,
               ),
               const GalleryWidget(),
-              const SizedBox(
-                height: 50,
-              ),
               SizedBox(
-                width: MediaQuery.of(context).size.width * 0.18,
-                child: const Divider(
-                  color: Colors.grey,
-                  height: 5,
-                  thickness: 1.5,
-                ),
+                height: MediaQuery.of(context).size.height * 0.1,
               ),
+              const DividerWidget(),
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
+                height: MediaQuery.of(context).size.height * 0.03,
               ),
               WebText(
                 txt: "Results",
                 color: Colors.blueGrey,
-                fontSize: 20,
+                fontSize: 70.sp,
               ),
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
+                height: MediaQuery.of(context).size.height * 0.08,
               ),
               CustomerPhotoWidget(homeController: homeController),
-              const SizedBox(
-                height: 80,
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.1,
               ),
-              const SizedBox(
-                width: 100,
-                child: Divider(
-                  color: Colors.grey,
-                  height: 5,
-                  thickness: 1.5,
-                ),
-              ),
-              const SizedBox(
-                height: 20,
+              const DividerWidget(),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.03,
               ),
               WebText(
                 txt: "Information",
                 color: Colors.blueGrey,
-                fontSize: 20,
+                fontSize: 70.sp,
               ),
-              const SizedBox(
-                height: 50,
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.08,
               ),
               InkWell(
                 onTap: () {
@@ -123,23 +102,25 @@ class HomeScreen extends StatelessWidget {
                 child: Container(
                   height: MediaQuery.of(context).size.width * 0.55,
                   width: MediaQuery.of(context).size.width * 0.7,
-                  decoration: const BoxDecoration(
-                      image: DecorationImage(
+                  decoration: BoxDecoration(
+                      image: const DecorationImage(
                     image: NetworkImage(
                         "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iqBBq0m3hqmA/v0/1200x-1.png"),
                     fit: BoxFit.cover,
-                  )),
+                  ),
+                    borderRadius: BorderRadius.circular(30),
+                  ),
                 ),
               ),
-              const SizedBox(
-                height: 80,
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.1,
               ),
               InfoSectionWidget(homeController: homeController),
             ],
           )
               .paddingMobile(
                   context,
-              horizontal: MediaQuery.of(context).size.width * 0.065, vertical: 0.0)
+              horizontal: MediaQuery.of(context).size.width * 0.065, vertical: 15.h),
         ),
         tab: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
@@ -149,78 +130,57 @@ class HomeScreen extends StatelessWidget {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.05,
               ),
-              const IntroWidget(),
+              IntroWidget(txtFontSize: 55.sp, descFontSize: 45.sp,),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.08,
               ),
               ThreeActionButtonWidget(homeController: homeController),
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.15,
+                height: MediaQuery.of(context).size.height * 0.1,
               ),
-              SizedBox(
-                width: MediaQuery.of(context).size.width * 0.18,
-                child: const Divider(
-                  color: Colors.grey,
-                  height: 5,
-                  thickness: 1.5,
-                ),
-              ),
+              const DividerWidget(),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.03,
               ),
               WebText(
                 txt: "Gallery",
                 color: Colors.blueGrey,
-                fontSize: 20,
+                fontSize: 60.sp,
               ),
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.08,
               ),
               const GalleryWidget(),
-              const SizedBox(
-                height: 50,
-              ),
               SizedBox(
-                width: MediaQuery.of(context).size.width * 0.18,
-                child: const Divider(
-                  color: Colors.grey,
-                  height: 5,
-                  thickness: 1.5,
-                ),
+                height: MediaQuery.of(context).size.height * 0.1,
               ),
+              const DividerWidget(),
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
+                height: MediaQuery.of(context).size.height * 0.03,
               ),
               WebText(
                 txt: "Results",
                 color: Colors.blueGrey,
-                fontSize: 20,
+                fontSize: 60.sp,
               ),
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.02,
+                height: MediaQuery.of(context).size.height * 0.08,
               ),
               CustomerPhotoWidget(homeController: homeController),
-              const SizedBox(
-                height: 80,
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.1,
               ),
-              const SizedBox(
-                width: 100,
-                child: Divider(
-                  color: Colors.grey,
-                  height: 5,
-                  thickness: 1.5,
-                ),
-              ),
-              const SizedBox(
-                height: 20,
+              const DividerWidget(),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.03,
               ),
               WebText(
                 txt: "Information",
                 color: Colors.blueGrey,
-                fontSize: 20,
+                fontSize: 60.sp,
               ),
-              const SizedBox(
-                height: 50,
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.08,
               ),
               InkWell(
                 onTap: () {
@@ -229,22 +189,24 @@ class HomeScreen extends StatelessWidget {
                 child: Container(
                   height: MediaQuery.of(context).size.width * 0.55,
                   width: MediaQuery.of(context).size.width * 0.7,
-                  decoration: const BoxDecoration(
-                      image: DecorationImage(
+                  decoration: BoxDecoration(
+                      image: const DecorationImage(
                     image: NetworkImage(
                         "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iqBBq0m3hqmA/v0/1200x-1.png"),
                     fit: BoxFit.cover,
-                  )),
+                  ),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
                 ),
               ),
-              const SizedBox(
-                height: 80,
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.1,
               ),
               InfoSectionWidget(homeController: homeController),
             ],
           )
               .paddingTab(
-                  context, horizontal: MediaQuery.of(context).size.width * 0.085, vertical: 0.0),
+                  context, horizontal: MediaQuery.of(context).size.width * 0.085, vertical: 15.h),
         ),
         desk: Row(
           children: [
@@ -267,7 +229,7 @@ class HomeScreen extends StatelessWidget {
                     SizedBox(
                       height: MediaQuery.of(context).size.height * 0.05,
                     ),
-                    const IntroWidget(),
+                    IntroWidget(txtFontSize: 38.sp, descFontSize: 32.sp,),
                     SizedBox(
                       height: MediaQuery.of(context).size.height * 0.08,
                     ),
@@ -326,12 +288,14 @@ class HomeScreen extends StatelessWidget {
                       child: Container(
                         height: MediaQuery.of(context).size.width * 0.55,
                         width: MediaQuery.of(context).size.width * 0.7,
-                        decoration: const BoxDecoration(
-                            image: DecorationImage(
+                        decoration: BoxDecoration(
+                            image: const DecorationImage(
                           image: NetworkImage(
                               "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iqBBq0m3hqmA/v0/1200x-1.png"),
                           fit: BoxFit.cover,
-                        )),
+                        ),
+                          borderRadius: BorderRadius.circular(15),
+                        ),
                       ),
                     ),
                     SizedBox(
@@ -341,7 +305,7 @@ class HomeScreen extends StatelessWidget {
                   ],
                 )
                     .paddingDesk(
-                        context, horizontal: MediaQuery.of(context).size.width * 0.1, vertical: 0.0)
+                        context, horizontal: MediaQuery.of(context).size.width * 0.1, vertical: 15.h),
               ),
             ),
           ],

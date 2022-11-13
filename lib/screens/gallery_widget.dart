@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class GalleryWidget extends StatelessWidget {
   const GalleryWidget({
@@ -8,8 +9,6 @@ class GalleryWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      // width: 1100,
-      // height: 900,
       child: GridView.builder(
         itemCount: 9,
         shrinkWrap: true,
@@ -23,8 +22,8 @@ class GalleryWidget extends StatelessWidget {
         itemBuilder: (context, index) => InkWell(
           borderRadius: BorderRadius.circular(8),
           child: Container(
-            width: 150,
-            height: 120,
+            width: 150.w,
+            height: 120.h,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
               image: const DecorationImage(

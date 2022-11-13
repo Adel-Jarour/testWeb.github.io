@@ -20,8 +20,9 @@ class ThreeActionButtonWidget extends StatelessWidget {
           WebButton(
             txt: "Email",
             outLineBorder: false,
-            width: 300,
-            high: 50,
+            width: 1090.w,
+            high: 60.h,
+            fontSize: 60.sp,
             colorButton: Colors.teal,
             onPressed: () {
               homeController.sendMail();
@@ -33,8 +34,9 @@ class ThreeActionButtonWidget extends StatelessWidget {
           WebButton(
             txt: "Call",
             outLineBorder: false,
-            width: 300,
-            high: 50,
+            width: 1090.w,
+            high: 60.h,
+            fontSize: 60.sp,
             colorButton: Colors.teal,
             onPressed: () {
               homeController.makeCall();
@@ -46,8 +48,9 @@ class ThreeActionButtonWidget extends StatelessWidget {
           WebButton(
             txt: "Location",
             outLineBorder: false,
-            width: 300,
-            high: 50,
+            width: 1090.w,
+            high: 60.h,
+            fontSize: 60.sp,
             colorButton: Colors.teal,
             onPressed: () {
               homeController.navigateToLocation(20, 20);
@@ -60,34 +63,38 @@ class ThreeActionButtonWidget extends StatelessWidget {
           WebButton(
             txt: "Email",
             outLineBorder: false,
-            width: 300,
-            high: 50,
+            // width: 600.w,
+            width: MediaQuery.of(context).size.width * 0.35,
+            high: MediaQuery.of(context).size.height * .061,
+            fontSize: 40.sp,
             colorButton: Colors.teal,
             onPressed: () {
               homeController.sendMail();
             },
           ),
-          const SizedBox(
-            height: 15,
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.02,
           ),
           WebButton(
             txt: "Call",
             outLineBorder: false,
-            width: 300,
-            high: 50,
+            width: MediaQuery.of(context).size.width * 0.35,
+            high: MediaQuery.of(context).size.height * .061,
+            fontSize: 40.sp,
             colorButton: Colors.teal,
             onPressed: () {
               homeController.makeCall();
             },
           ),
-          const SizedBox(
-            height: 15,
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.02,
           ),
           WebButton(
             txt: "Location",
             outLineBorder: false,
-            width: 300,
-            high: 50,
+            width: MediaQuery.of(context).size.width * 0.35,
+            high: MediaQuery.of(context).size.height * .061,
+            fontSize: 40.sp,
             colorButton: Colors.teal,
             onPressed: () {
               homeController.navigateToLocation(20, 20);
@@ -96,7 +103,6 @@ class ThreeActionButtonWidget extends StatelessWidget {
         ],
       ),
       desk: Row(
-        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Expanded(
             child: WebButton(

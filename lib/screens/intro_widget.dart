@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:test_web/widgets/custem_text.dart';
 
 class IntroWidget extends StatelessWidget {
-  const IntroWidget({
+   IntroWidget({
     Key? key,
+    required this.txtFontSize,
+    required this.descFontSize,
   }) : super(key: key);
+
+  double? txtFontSize;
+  double? descFontSize;
+
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +19,7 @@ class IntroWidget extends StatelessWidget {
         WebText(
           txt: "Welcome,",
           color: Colors.teal,
-          fontSize: 38.sp,
+          fontSize: txtFontSize,
           fontWeight: FontWeight.bold,
         ),
         SizedBox(
@@ -23,18 +28,8 @@ class IntroWidget extends StatelessWidget {
         WebText(
           txt: "Hi",
           color: Colors.blueGrey,
-          fontSize: 32.sp,
+          fontSize: descFontSize,
         ),
-        // SizedBox(
-        //   height: MediaQuery.of(context).size.height * 0.05,
-        // ),
-        // WebButton(
-        //   txt: "make",
-        //   outLineBorder: false,
-        //   width: MediaQuery.of(context).size.width * 0.3,
-        //   high: MediaQuery.of(context).size.height * 0.068,
-        //   colorButton: Colors.teal,
-        // ),
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.08,
         ),

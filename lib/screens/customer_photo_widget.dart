@@ -32,7 +32,8 @@ class CustomerPhotoWidget extends StatelessWidget {
             },
             scrollDirection: Axis.horizontal,
             itemCount: 10,
-            controller: homeController.pageController,
+            padEnds: false,
+            controller: homeController.getPageController(context),
             physics: const BouncingScrollPhysics(),
           ),
           Padding(

@@ -21,69 +21,71 @@ class InfoSectionWidget extends StatelessWidget {
         children: [
           WebText(
             txt: "Phone",
-            fontSize: 22,
+            fontSize: 70.sp,
             fontWeight: FontWeight.bold,
           ),
-          const SizedBox(
-            height: 10,
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.01,
           ),
           WebButton(
             txt: "Call",
             outLineBorder: false,
-            width: 300,
-            high: 50,
+            width: 1090.w,
+            high: 60.h,
+            fontSize: 60.sp,
             colorButton: Colors.teal,
             onPressed: () {
               homeController.makeCall();
             },
           ),
-          const SizedBox(
-            height: 10,
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.02,
           ),
           WebText(
             txt: "+972 56 702 2104",
-            fontSize: 18,
+            fontSize: 60.sp,
             color: Colors.grey,
           ),
-          const SizedBox(
-            height: 40,
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.08,
           ),
           WebText(
             txt: "Address",
-            fontSize: 22,
+            fontSize: 70.sp,
             fontWeight: FontWeight.bold,
           ),
-          const SizedBox(
-            height: 10,
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.01,
           ),
           WebButton(
             txt: "Address",
             outLineBorder: false,
-            width: 300,
-            high: 50,
+            width: 1090.w,
+            high: 60.h,
+            fontSize: 60.sp,
             colorButton: Colors.teal,
             onPressed: () {
               homeController.navigateToLocation(20, 20);
             },
           ),
-          const SizedBox(
-            height: 10,
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.02,
           ),
           WebText(
             txt: "Gaza - Palestine",
             color: Colors.grey,
-            fontSize: 18,
+            fontSize: 60.sp,
           ),
-          const SizedBox(
-            height: 40,
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.08,
           ),
           WebText(
-            txt: "times of work",
-            fontSize: 22,
+            txt: "Times of work",
+            fontSize: 70.sp,
             fontWeight: FontWeight.bold,
           ),
-          const SizedBox(
-            height: 10,
+          SizedBox(
+            height: MediaQuery.of(context).size.height * 0.01,
           ),
           WebText(
             txt: "Mo: 10:00–19:00 Uhr\n"
@@ -94,7 +96,7 @@ class InfoSectionWidget extends StatelessWidget {
                 "Sa: 09:00–17:00 Uhr\n"
                 "So: Geschlossen",
             color: Colors.grey,
-            fontSize: 18,
+            fontSize: 65.sp,
             height: 2,
           ),
         ],
@@ -108,58 +110,60 @@ class InfoSectionWidget extends StatelessWidget {
               children: [
                 WebText(
                   txt: "Phone",
-                  fontSize: 22,
+                  fontSize: 60.sp,
                   fontWeight: FontWeight.bold,
                 ),
-                const SizedBox(
-                  height: 10,
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
                 ),
                 WebButton(
                   txt: "Call",
                   outLineBorder: false,
-                  width: 300,
-                  high: 50,
+                  width: MediaQuery.of(context).size.width * 0.35,
+                  high: MediaQuery.of(context).size.height * .061,
+                  fontSize: 50.sp,
                   colorButton: Colors.teal,
                   onPressed: () {
                     homeController.makeCall();
                   },
                 ),
-                const SizedBox(
-                  height: 10,
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
                 ),
                 WebText(
                   txt: "+972 56 702 2104",
                   color: Colors.grey,
-                  fontSize: 18,
+                  fontSize: 55.sp,
                 ),
-                const SizedBox(
-                  height: 40,
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.06,
                 ),
                 WebText(
                   txt: "Address",
-                  fontSize: 22,
+                  fontSize: 60.sp,
                   fontWeight: FontWeight.bold,
                 ),
-                const SizedBox(
-                  height: 10,
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
                 ),
                 WebButton(
                   txt: "Location",
                   outLineBorder: false,
-                  width: 300,
-                  high: 50,
+                  width: MediaQuery.of(context).size.width * 0.35,
+                  high: MediaQuery.of(context).size.height * .061,
+                  fontSize: 50.sp,
                   colorButton: Colors.teal,
                   onPressed: () {
                     homeController.navigateToLocation(20, 20);
                   },
                 ),
-                const SizedBox(
-                  height: 10,
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
                 ),
                 WebText(
                   txt: "Gaza - palestine",
                   color: Colors.grey,
-                  fontSize: 18,
+                  fontSize: 55.sp,
                 ),
               ],
             ),
@@ -168,12 +172,12 @@ class InfoSectionWidget extends StatelessWidget {
             child: Column(
               children: [
                 WebText(
-                  txt: "times of work",
-                  fontSize: 22,
+                  txt: "Times of work",
+                  fontSize: 60.sp,
                   fontWeight: FontWeight.bold,
                 ),
-                const SizedBox(
-                  height: 10,
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
                 ),
                 WebText(
                   txt: "Mo: 10:00–19:00 Uhr\n"
@@ -184,7 +188,7 @@ class InfoSectionWidget extends StatelessWidget {
                       "Sa: 09:00–17:00 Uhr\n"
                       "So: Geschlossen",
                   color: Colors.grey,
-                  fontSize: 18,
+                  fontSize: 55.sp,
                   height: 2,
                 ),
               ],
