@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:test_web/constance/color_const.dart';
 import 'package:test_web/controller/home_controller.dart';
 import 'package:test_web/extinsions.dart';
 import 'package:test_web/responsive.dart';
@@ -26,7 +27,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: WebText(
           txt: "Amar web",
-          color: Colors.teal,
+          color: ColorConst.primaryColor,
         ),
       ),
       drawer: Responsive.isDesktop(context)

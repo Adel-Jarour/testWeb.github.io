@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:test_web/constance/color_const.dart';
 import 'package:test_web/widgets/custem_text.dart';
 
 class IntroWidget extends StatelessWidget {
@@ -18,7 +19,7 @@ class IntroWidget extends StatelessWidget {
       children: [
         WebText(
           txt: "Welcome,",
-          color: Colors.teal,
+          color: ColorConst.primaryColor,
           fontSize: txtFontSize,
           fontWeight: FontWeight.bold,
         ),

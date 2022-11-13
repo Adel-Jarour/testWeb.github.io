@@ -22,7 +22,6 @@ class ListTileDrawerWidget extends StatelessWidget {
           CustomListTile(
             txt: "Location",
             icon: Icons.location_on,
-            // iconSize: ,
             onTap: () {
               homeController.navigateToLocation(20, 29);
             },

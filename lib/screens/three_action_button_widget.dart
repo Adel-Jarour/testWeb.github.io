@@ -4,6 +4,8 @@ import 'package:test_web/controller/home_controller.dart';
 import 'package:test_web/responsive.dart';
 import 'package:test_web/widgets/custom_button.dart';
 
+import '../constance/color_const.dart';
+
 class ThreeActionButtonWidget extends StatelessWidget {
   const ThreeActionButtonWidget({
     Key? key,
@@ -23,7 +25,7 @@ class ThreeActionButtonWidget extends StatelessWidget {
             width: 1090.w,
             high: 60.h,
             fontSize: 60.sp,
-            colorButton: Colors.teal,
+            colorButton: ColorConst.primaryColor,
             onPressed: () {
               homeController.sendMail();
             },
@@ -37,7 +39,7 @@ class ThreeActionButtonWidget extends StatelessWidget {
             width: 1090.w,
             high: 60.h,
             fontSize: 60.sp,
-            colorButton: Colors.teal,
+            colorButton: ColorConst.primaryColor,
             onPressed: () {
               homeController.makeCall();
             },
@@ -51,7 +53,7 @@ class ThreeActionButtonWidget extends StatelessWidget {
             width: 1090.w,
             high: 60.h,
             fontSize: 60.sp,
-            colorButton: Colors.teal,
+            colorButton: ColorConst.primaryColor,
             onPressed: () {
               homeController.navigateToLocation(20, 20);
             },
@@ -67,7 +69,7 @@ class ThreeActionButtonWidget extends StatelessWidget {
             width: MediaQuery.of(context).size.width * 0.35,
             high: MediaQuery.of(context).size.height * .061,
             fontSize: 40.sp,
-            colorButton: Colors.teal,
+            colorButton: ColorConst.primaryColor,
             onPressed: () {
               homeController.sendMail();
             },
@@ -81,7 +83,7 @@ class ThreeActionButtonWidget extends StatelessWidget {
             width: MediaQuery.of(context).size.width * 0.35,
             high: MediaQuery.of(context).size.height * .061,
             fontSize: 40.sp,
-            colorButton: Colors.teal,
+            colorButton: ColorConst.primaryColor,
             onPressed: () {
               homeController.makeCall();
             },
@@ -95,7 +97,7 @@ class ThreeActionButtonWidget extends StatelessWidget {
             width: MediaQuery.of(context).size.width * 0.35,
             high: MediaQuery.of(context).size.height * .061,
             fontSize: 40.sp,
-            colorButton: Colors.teal,
+            colorButton: ColorConst.primaryColor,
             onPressed: () {
               homeController.navigateToLocation(20, 20);
             },
@@ -109,7 +111,7 @@ class ThreeActionButtonWidget extends StatelessWidget {
               txt: "Email",
               outLineBorder: false,
               high: 55.h,
-              colorButton: Colors.teal,
+              colorButton: ColorConst.primaryColor,
               onPressed: () {
                 homeController.sendMail();
               },
@@ -124,7 +126,7 @@ class ThreeActionButtonWidget extends StatelessWidget {
               txt: "Call",
               outLineBorder: false,
               high: 55.h,
-              colorButton: Colors.teal,
+              colorButton: ColorConst.primaryColor,
               onPressed: () {
                 homeController.makeCall();
               },
@@ -139,7 +141,7 @@ class ThreeActionButtonWidget extends StatelessWidget {
               txt: "Location",
               outLineBorder: false,
               high: 55.h,
-              colorButton: Colors.teal,
+              colorButton: ColorConst.primaryColor,
               onPressed: () {
                 homeController.navigateToLocation(20, 20);
               },

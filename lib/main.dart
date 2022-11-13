@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:test_web/constance/color_const.dart';
 import 'package:test_web/screens/about_us_screen.dart';
 import 'package:test_web/screens/home_screen.dart';
 
@@ -20,16 +21,16 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
             primarySwatch: Colors.blue,
-            appBarTheme: const AppBarTheme(
+            appBarTheme: AppBarTheme(
               iconTheme: IconThemeData(
-                color: Colors.teal,
+                color: ColorConst.primaryColor,
               ),
               backgroundColor: Colors.white,
               elevation: 2,
             ),
-            listTileTheme: const ListTileThemeData(
-              iconColor: Colors.teal,
-              textColor: Colors.teal,
+            listTileTheme: ListTileThemeData(
+              iconColor: ColorConst.primaryColor,
+              textColor: ColorConst.primaryColor,
             ),
             scaffoldBackgroundColor: Colors.white,
           ),
