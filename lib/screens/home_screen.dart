@@ -28,6 +28,7 @@ class HomeScreen extends StatelessWidget {
         title: WebText(
           txt: "Amar web",
           color: ColorConst.primaryColor,
+          fontSize: homeController.getSize(context),
         ),
       ),
       drawer: Responsive.isDesktop(context)
@@ -58,7 +59,7 @@ class HomeScreen extends StatelessWidget {
               ),
               WebText(
                 txt: "Gallery",
-                color: Colors.blueGrey,
+                color: ColorConst.secondColor,
                 fontSize: 70.sp,
               ),
               SizedBox(
@@ -74,7 +75,7 @@ class HomeScreen extends StatelessWidget {
               ),
               WebText(
                 txt: "Results",
-                color: Colors.blueGrey,
+                color: ColorConst.secondColor,
                 fontSize: 70.sp,
               ),
               SizedBox(
@@ -90,7 +91,7 @@ class HomeScreen extends StatelessWidget {
               ),
               WebText(
                 txt: "Information",
-                color: Colors.blueGrey,
+                color: ColorConst.secondColor,
                 fontSize: 70.sp,
               ),
               SizedBox(
@@ -145,7 +146,7 @@ class HomeScreen extends StatelessWidget {
               ),
               WebText(
                 txt: "Gallery",
-                color: Colors.blueGrey,
+                color: ColorConst.secondColor,
                 fontSize: 60.sp,
               ),
               SizedBox(
@@ -161,7 +162,7 @@ class HomeScreen extends StatelessWidget {
               ),
               WebText(
                 txt: "Results",
-                color: Colors.blueGrey,
+                color: ColorConst.secondColor,
                 fontSize: 60.sp,
               ),
               SizedBox(
@@ -177,7 +178,7 @@ class HomeScreen extends StatelessWidget {
               ),
               WebText(
                 txt: "Information",
-                color: Colors.blueGrey,
+                color: ColorConst.secondColor,
                 fontSize: 60.sp,
               ),
               SizedBox(
@@ -217,6 +218,7 @@ class HomeScreen extends StatelessWidget {
               child: Card(
                 elevation: 5,
                 child: SingleChildScrollView(
+                  controller: homeController.scrollController,
                   child: ListTileDrawerWidget(homeController: homeController),
                 ),
               ),
@@ -244,7 +246,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     WebText(
                       txt: "Gallery",
-                      color: Colors.blueGrey,
+                      color: ColorConst.secondColor,
                       fontSize: 32.sp,
                     ),
                     SizedBox(
@@ -260,7 +262,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     WebText(
                       txt: "Results",
-                      color: Colors.blueGrey,
+                      color: ColorConst.secondColor,
                       fontSize: 32.sp,
                     ),
                     SizedBox(
@@ -276,7 +278,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                     WebText(
                       txt: "Information",
-                      color: Colors.blueGrey,
+                      color: ColorConst.secondColor,
                       fontSize: 32.sp,
                     ),
                     SizedBox(

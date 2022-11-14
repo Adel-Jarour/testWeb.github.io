@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:test_web/constance/color_const.dart';
 
 
 class CustomListTile extends StatelessWidget {
@@ -28,7 +29,7 @@ class CustomListTile extends StatelessWidget {
       title: Text(
         "$txt",
         style: TextStyle(
-          color: Colors.teal,
+          color: ColorConst.primaryColor,
           fontSize: fontSize,
         ),
       ),

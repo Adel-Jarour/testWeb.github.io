@@ -28,7 +28,7 @@ class IntroWidget extends StatelessWidget {
         ),
         WebText(
           txt: "Hi",
-          color: Colors.blueGrey,
+          color: ColorConst.secondColor,
           fontSize: descFontSize,
         ),
         SizedBox(

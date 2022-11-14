@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:test_web/responsive.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -38,40 +39,39 @@ class HomeController extends GetxController {
   }
 
   late PageController _pageController;
-  late BuildContext context;
 
-  // double _getViewportFraction(){
-  //   if (double.infinity < 350){
-  //     return 1 / 1;
-  //   }else if (double.infinity >= 350 && double.infinity < 800){
-  //     return 1 / 2.0;
-  //   }else {
-  //     return 1/ 3;
-  //   }
-  // }
 
   PageController getPageController(BuildContext context){
     if (Responsive.isMobile(context)){
       return _pageController = PageController(viewportFraction: 1 / 1);
-    }else if (Responsive.isTablet(context)){
+    }else if (MediaQuery.of(context).size.width >= 576 &&
+        MediaQuery.of(context).size.width <= 680){
+      return _pageController = PageController(viewportFraction: 0.8);
+    }else if (MediaQuery.of(context).size.width >= 681 &&
+        MediaQuery.of(context).size.width <= 1250){
       return _pageController = PageController(viewportFraction: 1 / 2);
-    }else {
-      return _pageController = PageController(viewportFraction: 1 / 3);
+    } else {
+      return _pageController = PageController(viewportFraction: 2 / 5);
     }
   }
 
-  // @override
-  // void onInit() {
-  //
-  //   super.onInit();
-  //   // pageController = PageController(viewportFraction: 1 / 3);
-  // }
+
+  late ScrollController scrollController;
+
+
+  @override
+  void onInit() {
+    // TODO: implement onInit
+    super.onInit();
+    scrollController = ScrollController();
+  }
 
   @override
   void dispose() {
     // TODO: implement dispose
     super.dispose();
     _pageController.dispose();
+    scrollController.dispose();
   }
 
   void next() {
@@ -80,6 +80,16 @@ class HomeController extends GetxController {
   void back() {
     _pageController.previousPage(duration: const Duration(milliseconds: 900), curve: Curves.fastOutSlowIn);
   }
+
+
+  double? getSize(BuildContext context) {
+    if(Responsive.isDesktop(context)){
+      return 32.sp;
+    }else if (Responsive.isTablet(context)){
+      return 50.sp;
+    }
+    return 65.sp;
+}
 
 
 }
